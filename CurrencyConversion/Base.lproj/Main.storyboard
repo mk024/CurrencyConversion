@@ -1,25 +1,97 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-h2-7mx">
+                                <rect key="frame" x="101" y="257" width="119" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnL-um-urU"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an amount in U.S. Dollars" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="H0d-jB-S2O">
+                                <rect key="frame" x="20" y="219" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Euro" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75D-zw-V6G">
+                                <rect key="frame" x="-89" y="310" width="161" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Yen" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO4-rH-t9A">
+                                <rect key="frame" x="-105" y="354" width="165" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pound" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5f-Qn-nHQ">
+                                <rect key="frame" x="-64" y="404" width="166" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn7-z3-1hF">
+                                <rect key="frame" x="107" y="355" width="106" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0q-Go-iPE">
+                                <rect key="frame" x="107" y="405" width="106" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6M4-gB-vOv">
+                                <rect key="frame" x="107" y="310" width="106" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DeM-h2-7mx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="59D-ix-hHX"/>
+                            <constraint firstItem="DeM-h2-7mx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6fM-1l-evN"/>
+                            <constraint firstItem="hO4-rH-t9A" firstAttribute="top" secondItem="DeM-h2-7mx" secondAttribute="bottom" constant="52" id="BmZ-Sv-6Kj"/>
+                            <constraint firstItem="DeM-h2-7mx" firstAttribute="top" secondItem="H0d-jB-S2O" secondAttribute="bottom" constant="8" id="Kx3-dU-Tes"/>
+                            <constraint firstItem="J5f-Qn-nHQ" firstAttribute="top" secondItem="DeM-h2-7mx" secondAttribute="bottom" constant="102" id="N0t-Ms-w6g"/>
+                            <constraint firstItem="75D-zw-V6G" firstAttribute="centerY" secondItem="6M4-gB-vOv" secondAttribute="centerY" id="PTu-Du-VcL"/>
+                            <constraint firstItem="75D-zw-V6G" firstAttribute="top" secondItem="DeM-h2-7mx" secondAttribute="bottom" constant="2" id="Qlx-Vx-G32"/>
+                            <constraint firstItem="J5f-Qn-nHQ" firstAttribute="centerY" secondItem="d0q-Go-iPE" secondAttribute="centerY" id="ncl-Ie-A0P"/>
+                            <constraint firstItem="hO4-rH-t9A" firstAttribute="centerY" secondItem="nn7-z3-1hF" secondAttribute="centerY" id="obj-Zq-olO"/>
+                            <constraint firstItem="H0d-jB-S2O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qDi-fn-P8a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="convertButton" destination="DeM-h2-7mx" id="Ay2-60-Ybe"/>
+                        <outlet property="currencyA" destination="6M4-gB-vOv" id="XR7-vK-ff6"/>
+                        <outlet property="currencyB" destination="nn7-z3-1hF" id="VeN-gI-7DH"/>
+                        <outlet property="currencyC" destination="d0q-Go-iPE" id="ujU-YC-W7k"/>
+                        <outlet property="inputField" destination="H0d-jB-S2O" id="lVc-7g-Wpt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130" y="288"/>
         </scene>
     </scenes>
 </document>
